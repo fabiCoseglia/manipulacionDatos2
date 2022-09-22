@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <!-- HEAD -->
+<%- include('./partials/head') %>
+  <body>
+    <figure>
+      <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+  
+      <h1 class="text-center"><%= title %></h1>
+      <p class="text-center">Bienvenidos a <%= title %></p>
+
+      <div class="container d-flex justify-content-center gap-3 mt-3">
+        <a href="/movies"><button class="btn btn-info">Listas películas</button></a>
+        <a href="/movies/add"><button class="btn btn-success">Agregar películas</button></a>
+      </div>
+
+    
+    
+
+        <!-- SCRIPT-BOOTSTRAP -->
+      <%- include('./partials/script') %>
+  </body>
+</html>

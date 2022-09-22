@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+    </figure>
+    <h1>LISTADO DE PELÍCULAS</h1>
+    <br>
+    <div class="d-flex gap-1">
+        <a class="btn btn-info"  href="/movies/add">Agregar Película</a></p>
+        <a class="btn btn-info"  href="/">inicio</a></p>
+    </div>    
+    
+    <br>
+    <br>
+    <ul>
+        <% for( let i = 0; i < movies.length; i++ ) { %>
+        <li>
+            <a href="/movies/detail/<%= movies[i].id %>"><%= movies[i].title %></a>
+        </li>
+        <% } %>
+
+    </ul>
+
+
+
+    <!-- SCRIPT-BOOTSTRAP -->
+    <%- include('./partials/script') %>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<!-- HEAD -->
+<%- include('./partials/head') %>
+
+<body>
+    <figure>
+        <img src="/img/logo-DH.png" alt="Logo Digital House">
+      </figure>
+    <h1 class="titulo">Agregar Película</h1>
+    <br>
+    <section class="formulario">
+        <form action="/movies/create" method="POST">
+            <label for="title">Title </label>
+            <p><input type="text" name="title" id="" required></p>
+            <label for="rating">Rating </label>
+            <p><input type="number" name="rating" id="" required> </p>
+            <label for="awards">Awards </label>
+            <p><input type="number" name="awards" id="" required></p>
+            <label for="release_date">Release date </label>
+            <p><input type="date" name="release_date" id="" required></p>
+            <label for="length">Length </label>
+            <p><input type="number" name="length" id="" required></p>
+            <label for="genre">Géneros</label>
+            <select name="genre" id="">
+                <option value="" hidden selected>selecciona...</option>
+                <% allGenres.forEach(genre => { %>
+                    <option value="<%= genre.id %> "><%= genre.name %> </option>
+                <% }) %>
+            </select>
+            <br>
+            <div class="cols-4 mt-3">
+            <button class="btn btn-success" type="submit">Agregar</button>
+            <a  class="btn btn-info" href="/">Inicio</a>
+            </div>
+            
+        </form>
+    </section>
+    
+
+
+
+    <!-- SCRIPT-BOOTSTRAP -->
+    <%- include('./partials/script') %>
+</body>
+
+</html>
